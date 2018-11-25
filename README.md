@@ -13,18 +13,12 @@ Create docker image
 ```
 # Provide an Ansible playbook that creates a host in your Zabbix system called testhost.nsw.education. 
 
-Ansible script ansible_create_host.yml create host in zabbix system
+Ansible script ansible_create_host.yml that first create zabbix hostgroup and then a host in zabbix system
 
 ```console
 $ ansible-playbook ansible_create_host.yml
 ```
-# Provide an Ansible playbook that creates a host in your Zabbix system called testhost.nsw.education.
 
-Ansible script ansible_create_host.yml create host in zabbix system
-
-```console
-$ ansible-playbook ansible_create_host.yml
-```
 # Provide an Ansible playbook that export the “Template App Zabbix Agent” to a file called export_zabbix_agent.template
 
 Ansible script ansible_dump_template export template to file called export_zabbix_agent.template
