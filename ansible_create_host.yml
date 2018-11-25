@@ -24,7 +24,7 @@
         host_name: testhost.nsw.education
         host_groups:
           - ExampleHostG
-        visible_name: ExampleName
+        visible_name: testhost.nsw.education
         description: My ExampleHost Description
         interfaces:
             - type: 1
