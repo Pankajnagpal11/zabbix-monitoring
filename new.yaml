@@ -1,0 +1,36 @@
+---
+
+- hosts: localhost
+
+  vars:
+          zabbix_server:  http://localhost:80
+
+
+  tasks:
+  - name: Create host groups
+    local_action:
+        module: zabbix_group
+        server_url: http://localhost:80
+        login_user: Admin
+        login_password: zabbix
+        host_groups:
+                - TesthostEducation
+  - name: Create a new host 
+    local_action:
+        module: zabbix_host
+        server_url: http://localhost:80
+        login_user: Admin
+        login_password: zabbix
+        host_name: testhost.nsw.education
+        host_groups:
+          - TesthostEducation
+        visible_name: ExampleName
+        description: My ExampleHost Description
+        interfaces:
+            - type: 1
+              main: 1
+              useip: 1
+              ip: 10.1.1.1
+              dns: ""
+              port: 10050
+      

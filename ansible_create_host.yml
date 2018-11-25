@@ -1,0 +1,20 @@
+---
+
+- hosts: localhost
+
+  vars:
+     zabbix_server:  localhost:8090
+
+  
+  tasks:
+
+   - name: Create a new host or update an existing host's info
+     local_action:
+        module: zabbix_host
+        server_url: zabbix_server
+        login_user: username
+        login_password: password
+        host_name: ExampleHost
+        visible_name: ExampleName
+        description: My ExampleHost Description
+    
