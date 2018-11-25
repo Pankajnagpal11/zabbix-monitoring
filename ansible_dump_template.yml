@@ -3,19 +3,20 @@
 - hosts: localhost
 
   vars:
-     zabbix_server:  localhost:8090
+          zabbix_server:  http://localhost:80
 
-  
+
   tasks:
-
-   # Export template json definition
-    - name: Dump Zabbix template
-      local_action:
+  - name: Dump Zabbix template
+    local_action:
         module: zabbix_template
-        server_url: http://127.0.0.1
-        login_user: username
-        login_password: password
-        template_name: Template
+        server_url: http://localhost
+        login_user: Admin
+        login_password: zabbix
+        template_name: Template App Zabbix Agent
         state: dump
-      register: template_dump
+    register: template_dump
+  
+  - copy: content={{ template_dump }}  dest=export_zabbix_agent.template
     
+
