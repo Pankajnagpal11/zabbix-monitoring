@@ -21,7 +21,7 @@
         server_url: http://localhost:80
         login_user: Admin
         login_password: zabbix
-        host_name: ExampleHost
+        host_name: testhost.nsw.education
         host_groups:
           - ExampleHostG
         visible_name: ExampleName
