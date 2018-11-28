@@ -84,7 +84,7 @@ RUN apt-get ${APT_FLAGS_COMMON} update && \
     ./locale/make_mo.sh
 
 FROM ubuntu:bionic
-LABEL maintainer="Alexey Pustovalov <alexey.pustovalov@zabbix.com>"
+LABEL maintainer="pankaj.nagpal@gmail.com"
 
 ARG BUILD_DATE
 ARG VCS_REF
